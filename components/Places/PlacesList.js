@@ -1,5 +1,6 @@
 import { FlatList, StyleSheet, View, Text } from "react-native";
 import { Colors } from "../../constants/colors";
+import PlaceItem from './PlaceItem';
 
 function PlacesList({ places }) {
 
@@ -17,12 +18,9 @@ function PlacesList({ places }) {
         <FlatList
             data={places}
             keyExtractor={(item) => item.id}
-            renderItem={({ item }) => <PlaceItem place={item}
-            />
-            }
+            renderItem={({ item }) => <PlaceItem place={item} />}
         />
-    )
-
+    );
 }
 
 export default PlacesList;
